@@ -1,0 +1,64 @@
+<h2>Movie details</h2>
+
+<div *ngIf="movie">
+  <div *ngIf="cast">
+
+    <h1>{{movie.title}}</h1>
+    <p>{{movie.release_date.substr(0, 4)}}</p>
+    Directed by {{getDirectorName()}}
+
+    <p>{{movie.tagline}}</p>
+    <p>{{movie.overview}}</p>
+    <p>{{movie.runtime}} mins</p>
+
+    <p>{{movie.vote_average}}/10 ({{movie.vote_count}}) votes</p>
+
+    <!--  <p>Budget : {{movie.budget}}</p>-->
+    <!--  <p>Homepage : {{movie.homepage}}</p>-->
+    <!--  <p>Popularity : {{movie.popularity}}</p>-->
+    <!--  <p>Revenue : {{movie.revenue}}</p>-->
+    <!--  <p>Movie status : {{movie.movie_status}}</p>-->
+
+
+    <h2>CAST</h2>
+
+
+    <div class="container">
+      <div routerLink="/person/{{cast.person_id}}"
+           class="person-thumbnail" *ngFor="let cast of cast">
+
+
+        <div class="person-thumbnail-actor">{{cast.person_name}}</div>
+        <div class="person-thumbnail-character">{{cast.character_name}}</div>
+
+      </div>
+    </div>
+
+
+    <h2>CREW</h2>
+
+
+    <div class="container">
+      <div routerLink="/person/{{crew.person_id}}"
+           class="person-thumbnail" *ngFor="let crew of crew">
+
+
+        <div class="person-thumbnail-actor">{{crew.person_name}}</div>
+        <div class="person-thumbnail-character">{{crew.job}}</div>
+
+      </div>
+    </div>
+
+<!--    <div *ngIf="crew">-->
+<!--      <div *ngFor="let crew of crew">-->
+<!--        <a routerLink="/person/{{crew.person_id}}">-->
+<!--          {{crew.person_name}}-->
+
+<!--        </a>-->
+<!--        as {{crew.job}}-->
+<!--        <br/>-->
+<!--      </div>-->
+<!--    </div>-->
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+nav{
+  background-color: #505050;
+}
+
+row{
+
+  display: flex;
+  /*   flex-direction: row; */
+  flex-wrap: wrap;
+  /*   width: 100%; */
+  margin: auto;
+  justify-content: center;
+}

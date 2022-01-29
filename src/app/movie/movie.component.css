@@ -1,0 +1,31 @@
+.person-thumbnail{
+
+  background-color: #8c8b8b;
+  margin: 2px;
+  padding: 4px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.person-thumbnail:hover {
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: #343434;
+  cursor: pointer;
+}
+
+.person-thumbnail-actor {
+  color: antiquewhite;
+}
+
+.person-thumbnail-character {
+  color: #676767;
+
+}

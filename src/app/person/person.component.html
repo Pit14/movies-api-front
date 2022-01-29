@@ -1,0 +1,40 @@
+<h2>Person details</h2>
+
+<div *ngIf="cast.length > 0">
+
+  <p>Name : {{cast[0].person_name}}</p>
+
+  <h2>MOVIE CASTED</h2>
+
+  <div class="container">
+    <div routerLink="/movie/{{cast.movie_id}}"
+          *ngFor="let cast of cast">
+
+      <div class="column">
+        <div class="movie-rectangle">{{cast.movie_title}}</div>
+        <div class="person-thumbnail-character">{{cast.character_name}}</div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<div *ngIf="crew.length > 0">
+
+  <h2>MOVIES AS PART OF THE CREW</h2>
+
+  <div *ngFor="let crew of crew">
+    {{crew.job}} in
+
+    <a routerLink="/movie/{{crew.movie_id}}">
+      {{crew.movie_title}}
+    </a>
+
+    <br/>
+  </div>
+</div>
+
+
