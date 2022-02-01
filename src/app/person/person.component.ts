@@ -8,7 +8,7 @@ import {Location} from '@angular/common';
 @Component({
   selector: 'app-person',
   templateUrl: './person.component.html',
-  styleUrls: ['./person.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class PersonComponent implements OnInit {
 
