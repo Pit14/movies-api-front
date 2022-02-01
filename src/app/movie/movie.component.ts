@@ -10,7 +10,7 @@ import {forEach} from '@angular/router/src/utils/collection';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class MovieComponent implements OnInit {
 

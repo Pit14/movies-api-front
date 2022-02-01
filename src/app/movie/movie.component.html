@@ -42,23 +42,11 @@
       <div routerLink="/person/{{crew.person_id}}"
            class="person-thumbnail" *ngFor="let crew of crew">
 
-
         <div class="person-thumbnail-actor">{{crew.person_name}}</div>
         <div class="person-thumbnail-character">{{crew.job}}</div>
 
       </div>
     </div>
-
-<!--    <div *ngIf="crew">-->
-<!--      <div *ngFor="let crew of crew">-->
-<!--        <a routerLink="/person/{{crew.person_id}}">-->
-<!--          {{crew.person_name}}-->
-
-<!--        </a>-->
-<!--        as {{crew.job}}-->
-<!--        <br/>-->
-<!--      </div>-->
-<!--    </div>-->
 
   </div>
 </div>

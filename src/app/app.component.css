@@ -1,20 +1,9 @@
-.movie-rectangle{
-  background-color: #505050;
-  color : antiquewhite;
-  padding : 0.2em;
-  margin : 0.2em;
-  display: flex;
-  width: 156px;
-  height: 231px;
-  text-align: center;
-}
-
-.movies{
-  margin: auto;
-}
-
-body{
+body {
   background-color: #1a1a1a;
+}
+
+.movies {
+  margin: auto;
 }
 
 .row {
@@ -26,32 +15,6 @@ body{
   justify-content: center;
 }
 
-.column {
-  /*   display: flex; */
-  /*   flex-direction: column; */
-  /*   flex-basis: 100%; */
-  flex: 1;
-}
-
-.orange-column {
-  background-color: orange;
-  height: 100px;
-}
-
-.blue-column {
-  background-color: blue;
-  height: 100px;
-  min-width: 100px;
-}
-
-.green-column {
-  background-color: green;
-  height: 100px;
-  min-width: 100px;
-}
-
-
-/*clean*/
 .item {
   /*   margin: 0.3em; */
   padding: 0.5em;
@@ -62,8 +25,70 @@ body{
   min-width: 100px;
 }
 
-/*clean*/
-.auto {
-  flex: auto;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-rectangle {
+  background-color: #505050;
+  color: antiquewhite;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  width: 156px;
+  height: 231px;
+  text-align: center;
+}
+
+.movie-rectangle:hover{
+  background-color: #858585;
+
+}
+
+.person-thumbnail {
+  background-color: #8c8b8b;
+  margin: 3px;
+  padding: 4px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.person-thumbnail:hover {
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: #343434;
+  cursor: pointer;
+}
+
+.person-thumbnail-actor {
+  color: antiquewhite;
+}
+
+.person-thumbnail-character {
+  color: #676767;
+}
+
+.person-char-job{
+  color: #676767;
+  background-color: #8c8b8b;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  width: 156px;
+}
+
+/*.person-char-job:hover {*/
+/*  text-decoration: none;*/
+/*  color: antiquewhite;*/
+/*  background-color: #343434;*/
+/*  cursor: pointer;*/
+/*}*/
 

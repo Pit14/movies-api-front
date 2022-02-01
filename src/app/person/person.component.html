@@ -6,16 +6,21 @@
 
   <h2>MOVIE CASTED</h2>
 
+
   <div class="container">
-    <div routerLink="/movie/{{cast.movie_id}}"
-          *ngFor="let cast of cast">
+
+    <div *ngFor="let cast of cast">
 
       <div class="column">
-        <div class="movie-rectangle">{{cast.movie_title}}</div>
-        <div class="person-thumbnail-character">{{cast.character_name}}</div>
-      </div>
 
+        <div routerLink="/movie/{{cast.movie_id}}">
+          <div class="movie-rectangle">{{cast.movie_title}}</div>
+        </div>
+
+        <div class="person-char-job">{{cast.character_name}}</div>
+      </div>
     </div>
+
   </div>
 
 
@@ -26,15 +31,23 @@
 
   <h2>MOVIES AS PART OF THE CREW</h2>
 
-  <div *ngFor="let crew of crew">
-    {{crew.job}} in
+  <div class="container">
 
-    <a routerLink="/movie/{{crew.movie_id}}">
-      {{crew.movie_title}}
-    </a>
+    <div *ngFor="let crew of crew">
 
-    <br/>
+      <div class="column">
+
+        <div routerLink="/movie/{{crew.movie_id}}">
+          <div class="movie-rectangle">{{crew.movie_title}}</div>
+        </div>
+
+
+        <div class="person-char-job">{{crew.job}}</div>
+      </div>
+    </div>
+
   </div>
+
 </div>
 
 
