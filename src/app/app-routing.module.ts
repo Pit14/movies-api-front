@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {MovieComponent} from './movie/movie.component';
 import {PersonComponent} from './person/person.component';
-import {PreloadAllModules} from '@angular/router';
 
 const routes: Routes = [
   /*{ path: 'movies', component: MoviesComponent },*/
@@ -22,7 +21,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
     }
   )],
   exports: [RouterModule]
