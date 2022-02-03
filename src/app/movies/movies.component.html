@@ -1,26 +1,13 @@
 <h2>My movies</h2>
-<!--<ul class="movies">-->
-<div class="movies">
-  <div class="row">
+<div class="movies row">
 
-    <a routerLink="/movie/{{movie.movie_id}}"
-       class="movie-rectangle" *ngFor="let movie of movies"
-         [class.selected]="movie === selectedMovie"
-         (click)="onSelect(movie)">
-      {{movie.title}}
-    </a>
-  </div>
+
+  <a routerLink="/movie/{{movie.movie_id}}"
+     class="movie-rectangle" *ngFor="let movie of movies"
+     [class.selected]="movie === selectedMovie"
+     (click)="onSelect(movie)">
+    {{movie.title}}
+  </a>
+
 </div>
-<!--</ul>-->
 
-
-<!--<div *ngIf="selectedMovie">-->
-
-<!--<h2>{{selectedMovie.title | uppercase}} Details</h2>-->
-<!--<div><span>movie_id: </span>{{selectedMovie.movie_id}}</div>-->
-<!--<div>-->
-<!--  <label for="movie-title">Movie title: </label>-->
-<!--  <input movie_id="movie-title" [(ngModel)]="selectedMovie.title" placeholder="title">-->
-<!--</div>-->
-
-<!--</div>-->
