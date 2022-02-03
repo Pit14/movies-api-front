@@ -1,17 +1,33 @@
-<h2>Movie details</h2>
-
 <div *ngIf="movie">
   <div *ngIf="cast">
 
-    <h1>{{movie.title}}</h1>
-    <p>{{movie.release_date.substr(0, 4)}}</p>
-    Directed by {{getDirectorName()}}
+    <div class="row">
+      <h1>{{movie.title}}</h1>
+      <p> {{movie.release_date.substr(0, 4)}}  Directed by {{getDirectorName()}}</p>
+    </div>
 
-    <p>{{movie.tagline}}</p>
-    <p>{{movie.overview}}</p>
-    <p>{{movie.runtime}} mins</p>
 
-    <p>{{movie.vote_average}}/10 ({{movie.vote_count}}) votes</p>
+    <!--    <div class="container">-->
+    <div class="row">
+
+      <div class="column">
+
+        <p>{{movie.tagline}}</p>
+        <p>{{movie.overview}}</p>
+
+      </div>
+
+      <div class="column">
+
+        <p>{{movie.runtime}} mins</p>
+        <p>{{movie.vote_average}}/10 ({{movie.vote_count}}) votes</p>
+
+      </div>
+
+    </div>
+
+    <!--    </div>-->
+
 
     <!--  <p>Budget : {{movie.budget}}</p>-->
     <!--  <p>Homepage : {{movie.homepage}}</p>-->
@@ -20,10 +36,10 @@
     <!--  <p>Movie status : {{movie.movie_status}}</p>-->
 
 
+
     <h2>CAST</h2>
 
-
-    <div class="container">
+    <div class="row-wrap">
       <div routerLink="/person/{{cast.person_id}}"
            class="person-thumbnail" *ngFor="let cast of cast">
 
@@ -35,10 +51,10 @@
     </div>
 
 
+
     <h2>CREW</h2>
+    <div class="row-wrap">
 
-
-    <div class="container">
       <div routerLink="/person/{{crew.person_id}}"
            class="person-thumbnail" *ngFor="let crew of crew">
 
@@ -47,6 +63,7 @@
 
       </div>
     </div>
+
 
   </div>
 </div>

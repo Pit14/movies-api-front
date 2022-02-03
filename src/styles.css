@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2d3438;
+  color: #9ab;
+  font-size: 1em;
+
+}
+
+.below-banner{
+  margin: 8px;
+}
+
+p{
+  font-size: 1.4em;
+}
+
+/*FLEX*/
+
+.row {
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  align-items: baseline;
+  /*width: 100%;*/
+  /*margin: auto;*/
+  /*justify-content: center;*/
+}
+
+.row-wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.row p{
+  margin: 1em;
+}
+
+.container {
+  display: flex;
+  /*flex-wrap: nowrap;*/
+  /*justify-content: flex-start;*/
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*MOVIE*/
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 156px);
+  grid-gap: 0.75rem;
+  justify-content: space-evenly;
+  /*padding: 1em;*/
+}
+
+.movie-rectangle {
+  background-color: #505050;
+  color: antiquewhite;
+  /*padding: 5px;*/
+  /*margin: 5px;*/
+  padding-top: 0.5em;
+  width: 156px;
+  height: 231px;
+  text-align: center;
+}
+
+.movie-rectangle:hover {
+  background-color: #858585;
+}
+
+/*PERSON*/
+
+.person-thumbnail {
+  background-color: #8c8b8b;
+  margin: 3px;
+  padding: 4px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.person-thumbnail:hover {
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: #343434;
+  cursor: pointer;
+}
+
+.person-thumbnail-actor {
+  color: antiquewhite;
+}
+
+.person-thumbnail-character {
+  color: #676767;
+}
+
+.person-char-job {
+  color: #676767;
+  background-color: #8c8b8b;
+  padding: 5px;
+  /*margin: 5px;*/
+  margin-top: 0.5em;
+  border-radius: 10px;
+  text-align: center;
+  width: 146px;
+}
+
+/*BANNER*/
+
+.banner {
+  background-color: #14181c;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.banner-button {
+  color: aliceblue;
+  padding: 0.4em;
+  font-family: "Arial Black";
+  font-size: 1.5em;
+}
+
+.banner-button:hover {
+  cursor: pointer;
+  color: #667788;
+
+}
+
